@@ -5,6 +5,19 @@
   <title>TalkApp</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <link href="style.css" rel="stylesheet">
+	 <link href="assets/css/font-awesome.css" rel="stylesheet">
+	   <!-- Bootstrap -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">   
+    <!-- Slick slider -->
+    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">    
+    <!-- Date Picker -->
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datepicker.css">   
+     <!-- Gallery Lightbox -->
+    <link href="assets/css/magnific-popup.css" rel="stylesheet"> 
+    <!-- Theme color -->
+    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">  
+	 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -30,10 +43,12 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li class="active"><a href="home.php">Home</a></li>
-          <li><a href="add_book.html">Add Book</a></li>
-          <li><a href="frend.php">View</a></li>
-          <li><a href="msg.php">Edit</a></li>
-          <li><a href="#">Notification</a></li>
+          <li><a href="add_book.html">Books</a></li>
+          <li><a href="frend.php">Authors</a></li>
+          <li><a href="category.php">Categories</a></li>
+		  <li><a href="msg.php">issue a book</a></li>
+		  <li><a href="msg.php">All students</a></li>
+          <li><a href="#">modify password</a></li>
 
         </ul>
         <ul class="nav navbar-nav navbar-right">
@@ -46,7 +61,7 @@
   <div class="container">
     <div class="row">
       <br><br><br><br><br><br>
-      <div class="col-sm-4 text-center jumbotron hidden-sm hidden-xs">
+      <div class="col-sm-12 text-center jumbotron hidden-sm ">
 
 
         <p>Labery Information</p>
@@ -54,28 +69,17 @@
         <hr>
         <p>All books:100</p>
         <p>Avaible books:70</p>
-        <p>browed books:30</p>
+        <p>issued books:30</p>
+		 <p>registration students:30</p>
+		  <p>authors:30</p>
+		    <p>available categories:30</p>
       </div>
-      <div class="col-sm-8">
-        <div>
-          <h2>TITLE HEADING</h2>
-          <h5>Title description, Dec 7, 2017</h5>
-          <div class="fakeimg">Fake Image</div>
-          <p>Some text..</p>
-          <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-        </div>
-        <br>
-        <h2>TITLE HEADING</h2>
-        <h5>Title description, Sep 2, 2017</h5>
-        <div class="fakeimg">Fake Image</div>
-        <p>Some text..</p>
-        <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-      </div>
+     
     </div>
   </div>
 
   <div class="jumbotron text-center" style="margin-bottom:0">
-    &copycopyright by TalkApp.com</p>
+    &copycopyright by Nicole</p>
   </div>
 
 </body>
