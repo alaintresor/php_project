@@ -1,15 +1,15 @@
 <?php
 include 'connection.php';
-$BN = $_POST['bn'];
+$bn = $_POST['bn'];
 $title = $_POST['title'];
-$autho = $_POST['autho'];
+$autho = $_POST['author'];
 $category = $_POST['category'];
-$picture = $_POST['picture'];
 
-$query = "INSERT INTO `student` VALUES('','$BN','$title','$autho','$category','$picture')";
+
+$query = "INSERT INTO `books` VALUES('','$bn','$title','$autho','$category')";
 $done = mysqli_query($connection, "$query");
 if ($done) {
-    echo "data saved well";
+    echo "<script>alert('data saved well');window.open('book.php','_self')</script>";
 } else {
-    echo "something went a worng";
+    echo "<script>alert('something went worng');history.go(-1)</script>";
 }
