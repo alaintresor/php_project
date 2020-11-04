@@ -78,19 +78,19 @@ if (isset($_POST['save'])) {
                             <?php
                             echo " <div class='form-group'>
                                 <label for='firstname'>Book Number:</label>
-                                <input type='text' class='form-control' value='$oldBn' required='' name='bn' placeholder='Enter book number'>
+                                <input type='text' class='form-control' value='$oldBn' required='' disabled name='bn' placeholder='Enter book number'>
                             </div>
                             <div class='form-group'>
                                 <label for='firstname'>Book Title:</label>
-                                <input type='text' value='$oldTitle' class='form-control' required='' name='title' placeholder='Enter Book title'>
+                                <input type='text' value='$oldTitle' class='form-control' disabled  required='' name='title' placeholder='Enter Book title'>
                             </div>
                              <div class='form-group'>
                                 <label for='firstname'>Book Number:</label>
-                                <input type='text' class='form-control' value='$oldBn' required='' name='bn' placeholder='Enter book number'>
+                                <input type='text' class='form-control' value='$author' disabled  required='' name='bn' placeholder='Enter book number'>
                             </div>
                             <div class='form-group'>
                                 <label for='firstname'>Book Title:</label>
-                                <input type='text' value='$oldTitle' class='form-control' required='' name='title' placeholder='Enter Book title'>
+                                <input type='text' value='$category' class='form-control' disabled  required='' name='title' placeholder='Enter Book title'>
                             </div>
                             ";
                             ?>
