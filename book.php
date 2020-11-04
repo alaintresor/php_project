@@ -1,3 +1,13 @@
+<?php
+include'connection.php';
+
+$query="SELECT * FROM `categories`";
+$sql="SELECT * FROM `authors`";
+
+$data= mysqli_query($connection,"$query");
+$data2= mysqli_query($connection,"$sql");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -63,34 +73,39 @@
             <!-- <div id="blockspace" class="text-center">
                 <br><br>
                 Tolkapp</div> -->
-            <form class="jumbotron" id="login" method="post" action="singup.php">
+            <form class="jumbotron" id="login" method="post" action="add_book.php">
                 <p class="text-center">Add New book</p>
                 <div class="form-group">
                     <label for="firstname">Book Number:</label>
-                    <input type="text" class="form-control" required='' name="fname" placeholder="Enter book number">
+                    <input type="text" class="form-control" required='' name="bn" placeholder="Enter book number">
                 </div>
                 <div class="form-group">
                     <label for="firstname">Book Title:</label>
-                    <input type="text" class="form-control" required='' name="fname" placeholder="Enter Book title">
+                    <input type="text" class="form-control" required='' name="title" placeholder="Enter Book title">
                 </div>
                 <div class="form-group">
-                    <label for="lastname">Book Autho:</label>
-                    <input type="text" class="form-control" required='' name="lname" placeholder="Enter book autho">
-                </div>
-                <div class="form-group">
-                    <label for="gender">Book Category:</label>
-                    <select class="form-control" name="sex">
+                    <label for="gender">Book Author:</label>
+                    <select class="form-control" name="author">
                         <option class="disabled">......</option>
-                        <option>History</option>
-                        <option>Nover</option>
-                        <option>History</option>
-                        <option>Nover</option>
+                        <?php 
+                        while($row=mysqli_fetch_array($data2)){
+                           echo "<option>$row[1]</option>";
+                        }
+                        ?>
                     </select>
                 </div>
                 <div class="form-group">
-                    <label for="birth-date">Book Picture</label>
-                    <input type="file" required='' class="form-control" name="dob">
+                    <label for="gender">Book Category:</label>
+                    <select class="form-control" name="category">
+                        <option class="disabled">......</option>
+                        <?php 
+                        while($row=mysqli_fetch_array($data)){
+                           echo "<option>$row[1]</option>";
+                        }
+                        ?>
+                    </select>
                 </div>
+                
 
                 <div class="form-group">
                     <input type="submit" class="btn btn-primary from-control" value="Add" name="done">

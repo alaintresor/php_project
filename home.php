@@ -5,19 +5,19 @@
   <title>TalkApp</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-   <link href="style.css" rel="stylesheet">
-	 <link href="assets/css/font-awesome.css" rel="stylesheet">
-	   <!-- Bootstrap -->
-    <link href="assets/css/bootstrap.css" rel="stylesheet">   
-    <!-- Slick slider -->
-    <link rel="stylesheet" type="text/css" href="assets/css/slick.css">    
-    <!-- Date Picker -->
-    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datepicker.css">   
-     <!-- Gallery Lightbox -->
-    <link href="assets/css/magnific-popup.css" rel="stylesheet"> 
-    <!-- Theme color -->
-    <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">  
-	 
+  <link href="style.css" rel="stylesheet">
+  <link href="assets/css/font-awesome.css" rel="stylesheet">
+  <!-- Bootstrap -->
+  <link href="assets/css/bootstrap.css" rel="stylesheet">
+  <!-- Slick slider -->
+  <link rel="stylesheet" type="text/css" href="assets/css/slick.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap-datepicker.css">
+  <!-- Gallery Lightbox -->
+  <link href="assets/css/magnific-popup.css" rel="stylesheet">
+  <!-- Theme color -->
+  <link id="switcher" href="assets/css/theme-color/default-theme.css" rel="stylesheet">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -43,11 +43,11 @@
       <div class="collapse navbar-collapse" id="myNavbar">
         <ul class="nav navbar-nav">
           <li class="active"><a href="home.php">Home</a></li>
-          <li><a href="add_book.html">Books</a></li>
-          <li><a href="frend.php">Authors</a></li>
+          <li><a href="book.php">Books</a></li>
+          <li><a href="authors.php">Authors</a></li>
           <li><a href="category.php">Categories</a></li>
-		  <li><a href="msg.php">issue a book</a></li>
-		  <li><a href="msg.php">All students</a></li>
+          <li><a href="msg.php">issue a book</a></li>
+          <li><a href="msg.php">All students</a></li>
           <li><a href="#">modify password</a></li>
 
         </ul>
@@ -70,11 +70,11 @@
         <p>All books:100</p>
         <p>Avaible books:70</p>
         <p>issued books:30</p>
-		 <p>registration students:30</p>
-		  <p>authors:30</p>
-		    <p>available categories:30</p>
+        <p>registration students:30</p>
+        <p>authors:30</p>
+        <p>available categories:30</p>
       </div>
-     
+
     </div>
   </div>
 
