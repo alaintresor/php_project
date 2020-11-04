@@ -1,12 +1,12 @@
 <?php
 include 'connection.php';
-$BN = $_POST['bn'];
+$bn = $_POST['bn'];
 $title = $_POST['title'];
 $autho = $_POST['author'];
 $category = $_POST['category'];
 
 
-$query = "INSERT INTO `books` VALUES('','$BN','$title','$autho','$category')";
+$query = "INSERT INTO `books` VALUES('','$bn','$title','$autho','$category')";
 $done = mysqli_query($connection, "$query");
 if ($done) {
     echo "<script>alert('data saved well');window.open('book.php','_self')</script>";
