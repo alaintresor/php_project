@@ -52,8 +52,8 @@ $data3= mysqli_query($connection,"$sql");
           <li><a href="authors.php">Authors</a></li>
           <li ><a href="category.php">Categories</a></li>
           <li><a href="issue.php">issue a book</a></li>
-          <li><a href="student.php">All students</a></li>
-          <li><a href="#">modify password</a></li>
+          <li><a href="allStudent.php">All students</a></li>
+          <li><a href="admin_change_password.php">modify password</a></li>
 
         </ul>
         <ul class="nav navbar-nav navbar-right">

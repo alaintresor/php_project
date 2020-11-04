@@ -1,3 +1,18 @@
+<?php
+include'connection.php';
+$query = "SELECT count(id) FROM `issuedbookdetail`";
+$data = mysqli_query($connection, "$query");
+
+$books=mysqli_query($connection, "SELECT * FROM `books`");
+$students=mysqli_query($connection, "SELECT * FROM `students`");
+$authors=mysqli_query($connection, "SELECT * FROM `authors`");
+$categories=mysqli_query($connection, "SELECT * FROM `categories`");
+$null=null;
+$returnbook=mysqli_query($connection, "SELECT * FROM `issuedbookdetail` WHERE `returndate`!='$null'");
+$notreturnbook=mysqli_query($connection, "SELECT * FROM `issuedbookdetail` WHERE `returndate`='$null'");
+ ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,9 +59,9 @@
           <li><a href="book.php">Books</a></li>
           <li><a href="authors.php">Authors</a></li>
           <li><a href="category.php">Categories</a></li>
-          <li><a href="msg.php">issue a book</a></li>
-          <li><a href="msg.php">All students</a></li>
-          <li><a href="#">modify password</a></li>
+          <li><a href="ISSUE.php">issue a book</a></li>
+          <li><a href="allStudent.php">All students</a></li>
+          <li><a href="admin_change_password.php">modify password</a></li>
         </ul>
         <ul class="nav navbar-nav navbar-right">
           <li class=""><a href="logout.php">Logout</a></li>
@@ -58,14 +73,36 @@
     <div class="row">
       <br><br><br><br><br><br>
       <div class="col-sm-12 text-center jumbotron hidden-sm ">
-        <p>Labery Information</p>
+        <p>System Information</p>
         <hr>
-        <p>All books:100</p>
-        <p>Avaible books:70</p>
-        <p>issued books:30</p>
-        <p>registration students:30</p>
-        <p>authors:30</p>
-        <p>available categories:30</p>
+        <p>All books:<?php
+           $num=mysqli_num_rows($books);
+           echo $num;
+         ?></p>
+        <p>Returned issued books:<?php
+           $num=mysqli_num_rows($returnbook);
+           echo $num;
+         ?></p>
+          <p>Not yet Returned issued books:<?php
+           $num=mysqli_num_rows($notreturnbook);
+           echo $num;
+         ?></p>
+        <p>issued books:<?php
+           $num=mysqli_num_rows($data);
+           echo $num;
+         ?></p>
+        <p>registration students:<?php
+           $num=mysqli_num_rows($students);
+           echo $num;
+         ?></p>
+        <p>authors:<?php
+           $num=mysqli_num_rows($authors);
+           echo $num;
+         ?></p>
+        <p>available categories:<?php
+           $num=mysqli_num_rows($categories);
+           echo $num;
+         ?></p>
       </div>
     </div>
   </div>

@@ -12,12 +12,25 @@ if (mysqli_num_rows($data1)>0) {
    
   $data2=mysqli_query($connection, "SELECT * from `books` WHERE BN='$bookid'");
   if (mysqli_num_rows($data2)) {
+    $null=null;
+    $data3=mysqli_query($connection, "SELECT * from `issuedbookdetail` WHERE bookid='$bookid' && returndate!='$null'");
+    if ($data3) {
+    if(mysqli_num_rows($data3)>0){
+     $query_insert=mysqli_query($connection, "INSERT INTO  issuedbookdetail(bookid,studentid) values('$bookid','$studentid')");
+    if ($query_insert) {
+      header('location:issue.php');
+    }else{
+      echo"something went wrong".mysqli_error($connection);
+    }
+    }else{
 
-  	$query_insert=mysqli_query($connection, "INSERT INTO  issuedbookdetail(bookid,studentid) values('$bookid','$studentid')");
-  	if ($query_insert) {
-  		header('location:issue.php');
-  	}
-
+      echo "This book is taken";
+    }
+  	
+}
+else{
+  echo "string".mysqli_error($connection);
+}
   }else{
 
   	echo "book with this id is not available";

@@ -14,16 +14,14 @@ while ($row = mysqli_fetch_array($data2)) {
     $oldTitle = $row[2];
      $author = $row[3];
     $category = $row[4];
+    $cashold = $row['cash'];
 }
 if (isset($_POST['save'])) {
-    $bn = $_POST['bn'];
-    $title = $_POST['title'];
-    $author = $_POST['author'];
-    $category = $_POST['category'];
-    $sql2 = "UPDATE `books` SET `title`='$title',`bn`='$bn',`category`='$category',`autho`='$author' WHERE `id`='$id'";
+    $cash = $_POST['cash'];
+    $sql2 = "UPDATE `issuedbookdetail` SET `cash`='$cash' WHERE `bookid`='$id'";
     $done = mysqli_query($connection, "$sql2");
     if ($done) {
-        echo "<script>alert('data updated well');window.open('book.php','_self')</script>";
+        echo "<script>alert('data updated well');window.open('issue.php','_self')</script>";
     } else {
         echo "noo" . mysqli_error($connection);
     }
@@ -97,7 +95,7 @@ if (isset($_POST['save'])) {
                         
                                <div class='form-group'>
                                 <label for='firstname'>cash(rwf):</label>
-                                <input type='text'   class='form-control' required='' name='title' placeholder='Enter Book title'>
+                                <input type='text'   class='form-control' value='$cashold' required='' name='cash' placeholder='$$$'>
                             </div>
 
                             <a href="book.php"> <button type="button" name="create" class="btn btn-warning">cancel </button></a>

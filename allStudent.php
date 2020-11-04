@@ -1,7 +1,7 @@
 
 <?php
 include 'connection.php';
-$query = "SELECT * FROM `issuedbookdetail`";
+$query = "SELECT * FROM `students`";
 $data = mysqli_query($connection, "$query");
 ?>
 
@@ -53,8 +53,8 @@ $data = mysqli_query($connection, "$query");
           <li><a href="add_book.html">Books</a></li>
           <li><a href="authors.php">Authors</a></li>
           <li><a href="category.php">Categories</a></li>
-		  <li  class="active"><a href="issue.php">issue a book</a></li>
-		  <li><a href="allStudent.php">All students</a></li>
+		  <li><a href="issue.php">issue a book</a></li>
+		  <li  class="active"><a href="#">All students</a></li>
           <li><a href="admin_change_password.php">modify password</a></li>
 
         </ul>
@@ -68,8 +68,8 @@ $data = mysqli_query($connection, "$query");
          <div class="container">
 <div class="row">
 <div class="col-md-12 col-sm-12 col-xs-12"">
-<div class="col-md-8 col-sm-8 col-xs-12 "">
- <h4 class="header-line">Manage issued books</h4>
+
+ <h4 class="header-line">Manage All students</h4>
         <div class="panel panel-info">
           <div class="panel-heading">
             List of Books
@@ -79,12 +79,12 @@ $data = mysqli_query($connection, "$query");
             <table class="table table-striped table-hover">
               <tbody>
                   <thead>
-                      <tr><th>BN</th><th>Studentid</th><th>issued date</th><th>returned date</th></tr>
+                      <tr><th>Studentid</th><th>FULL NAME</th><th>EMAIL</th><th>REG DATE</th></tr>
                   </thead>
                 <?php while ($row = mysqli_fetch_array($data)) {
-                  $returndate=$row['returndate'];
+                  //$returndate=$row['returndate'];
                   ?>
-                  <tr><td><?php echo $row[1]; ?></td><td><?php echo $row[2]; ?></td><td><?php echo $row[3]; ?></td><td><?php if($returndate==null){echo "not yet returned";}else{echo $returndate;} ?></td><td align='right'><a href='issueUpdate.php?id=<?php echo $row[1] ?>'> Edit</a></td><td align='right'> <!--<a href='deleteBook.php?id= echo $row[0] ?>'> Delete</a>--></td></tr>
+                  <tr><td><?php echo $row[1]; ?></td><td><?php echo $row[2]; ?></td><td><?php echo $row[3]; ?></td><td><?php echo $row[5]; ?></td><td align='right'><!--<a href='issueUpdate.php?id=<?php echo $row[1] ?>'> Edit</a>--></td><td align='right'> <a href='deleteStudent.php?id=<?php echo $row[0] ?>'> Delete</a></td></tr>
                   <?php
                 }  ?>
               </tbody>
@@ -92,24 +92,6 @@ $data = mysqli_query($connection, "$query");
 
           </div>
         </div></div>
-<div class="col-md-4 col-sm-4 col-xs-12 "">
-<p><h4 class="header-line">issue book</h4></p>
-<div class="panel panel-info">
-<div class="panel-body">
-<form role="form" method="post" action="bookIssue.php">
-<div class="form-group">
-<label>StudentId </label>
-<input class="form-control" type="text" name="stu_id" autocomplete="off" required />
-<label>BookID(ISBN)</label>
-<input class="form-control" type="text" name="book_id" autocomplete="off" required />
-</div>
-
-<button type="submit" name="issueBook" class="btn btn-info">Issue book </button>
-
-                                    </form>
-                            </div>
-                        </div>
-                            </div></div>
 
         </div>
    
