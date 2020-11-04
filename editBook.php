@@ -18,12 +18,12 @@ if (isset($_POST['save'])) {
     $title = $_POST['title'];
     $author = $_POST['author'];
     $category = $_POST['category'];
-    $sql2 = "UPDATE `books` SET `title`='$title',`bn`='$bn',`category`='$category',`author`='$author' WHERE `id`='$id'";
+    $sql2 = "UPDATE `books` SET `title`='$title',`bn`='$bn',`category`='$category',`autho`='$author' WHERE `id`='$id'";
     $done = mysqli_query($connection, "$sql2");
     if ($done) {
-        echo "<script>alert('data updated well');window.open('category.php','_self')</script>";
+        echo "<script>alert('data updated well');window.open('book.php','_self')</script>";
     } else {
-        echo "noo";
+        echo "noo" . mysqli_error($connection);
     }
 }
 
@@ -72,7 +72,7 @@ if (isset($_POST['save'])) {
                         Book Info
                     </div>
                     <div class="panel-body">
-                        <form method="post" action="add_book.php">
+                        <form method="post" action="#">
                             <?php
                             echo " <div class='form-group'>
                                 <label for='firstname'>Book Number:</label>
