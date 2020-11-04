@@ -1,3 +1,15 @@
+
+  <?php 
+session_start();
+if (!isset($_SESSION['loggedin']) || $_SESSION['loggedin'] !== true) {
+  header('location:index.html');
+  exit;
+}
+
+
+   ?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -44,9 +56,9 @@
         <ul class="nav navbar-nav">
           <li class="active"><a href="home.php">Home</a></li>
           <li><a href="add_book.html">Books</a></li>
-          <li><a href="frend.php">Authors</a></li>
+          <li><a href="authors.php">Authors</a></li>
           <li><a href="category.php">Categories</a></li>
-		  <li><a href="msg.php">issue a book</a></li>
+		  <li><a href="issue.php">issue a book</a></li>
 		  <li><a href="msg.php">All students</a></li>
           <li><a href="#">modify password</a></li>
 

@@ -1,4 +1,12 @@
 <?php
+
+session_start();
+if (isset($_SESSION["loggedin"]) && $_SESSION["loggedin"] === true) {
+	header("location:home.php");
+	exit;
+}
+
+
 include 'connection.php';
 
 $username = $_POST['username'];
@@ -9,6 +17,11 @@ $data = mysqli_query($connection, "$query");
 // echo $username;
 while ($result = mysqli_fetch_array($data)) {
     if ($result['username'] == $username && $result['password'] == $password) {
+    	session_start();
+
+    	$_SESSION["loggedin"] = true;
+        $_SESSION["password"] = $password;
+        $_SESSION["username"] = $username;
         header('location:home.php');
     } else {
 		echo $result['username'];

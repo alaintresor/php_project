@@ -1,4 +1,4 @@
- 
+
  <!DOCTYPE html>
 <html lang="en">
 
@@ -45,9 +45,9 @@
         <ul class="nav navbar-nav">rs.php
           <li><a href="home.php">Home</a></li>
           <li><a href="add_book.html">Books</a></li>
-          <li  class="active"><a href="authors.php">Authors</a></li>
+          <li><a href="authors.php">Authors</a></li>
           <li><a href="category.php">Categories</a></li>
-		  <li><a href="msg.php">issue a book</a></li>
+		  <li  class="active"><a href="issue.php">issue a book</a></li>
 		  <li><a href="msg.php">All students</a></li>
           <li><a href="#">modify password</a></li>
 
@@ -69,15 +69,15 @@
 <p><h4 class="header-line">issue book</h4></p>
 <div class="panel panel-info">
 <div class="panel-body">
-<form role="form" method="post">
+<form role="form" method="post" action="bookIssue.php">
 <div class="form-group">
 <label>StudentId </label>
-<input class="form-control" type="text" name="category" autocomplete="off" required />
+<input class="form-control" type="text" name="stu_id" autocomplete="off" required />
 <label>BookID(ISBN)</label>
-<input class="form-control" type="text" name="category" autocomplete="off" required />
+<input class="form-control" type="text" name="book_id" autocomplete="off" required />
 </div>
 
-<button type="submit" name="create" class="btn btn-info">Issue book </button>
+<button type="submit" name="issueBook" class="btn btn-info">Issue book </button>
 
                                     </form>
                             </div>

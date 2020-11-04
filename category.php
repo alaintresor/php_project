@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-  <title>TalkApp</title>
+  <title>Online Library management system</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <link href="style.css" rel="stylesheet">
@@ -47,7 +47,7 @@
           <li><a href="add_book.html">Books</a></li>
           <li><a href="authors.php">Authors</a></li>
           <li  class="active"><a href="category.php">Categories</a></li>
-		  <li><a href="msg.php">issue a book</a></li>
+		  <li><a href="issue.php">issue a book</a></li>
 		  <li><a href="msg.php">All students</a></li>
           <li><a href="#">modify password</a></li>
 

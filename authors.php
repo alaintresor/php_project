@@ -3,7 +3,7 @@
 <html lang="en">
 
 <head>
-  <title>TalkApp</title>
+  <title>Online Library Management System</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
    <link href="style.css" rel="stylesheet">
